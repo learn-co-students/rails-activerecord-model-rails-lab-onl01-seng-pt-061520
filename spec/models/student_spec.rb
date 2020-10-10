@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-describe Student do
+RSpec.describe Student, type: :model do
   before(:each) do
     @student = Student.create!(first_name: "Daenerys", last_name: "Targaryen")
   end
 
-  it 'can be created' do
+  it 'can be created' do 
     expect(@student).to be_valid
   end
 
@@ -13,3 +13,4 @@ describe Student do
     expect(@student.to_s).to eq("Daenerys Targaryen")
   end
 end
+
